@@ -1,8 +1,7 @@
 
 /* 컨텐츠 사이즈 */
-.contentsSize{max-width: 1180px; margin-inline: auto;
-    &.block{padding-block: 120px 140px;}
-}
+.contentsSize{max-width: 1180px; margin-inline: auto;}
+.contentsBlcok{padding-block: 120px 140px;}
 
 
 /* 마크 app */
@@ -31,7 +30,7 @@ a[class^="icon"]{font-size: 16px; font-weight: 500; width: 330px; line-height: 6
 
 
 /* 해더 */
-header{position: sticky; left: 0; top: 0; background-color: white; border-bottom: 1px solid var(--colorLine);
+header{position: sticky; left: 0; top: 0; background-color: white; border-bottom: 1px solid var(--colorLine); z-index: 100;
     & h1{position: absolute; left: 30px; top: 50%; transform: translateY(-50%); width: 62px;
         & a img{width: 100%;}
     }
