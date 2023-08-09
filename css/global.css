@@ -5,16 +5,17 @@
 }
 
 
-/* app 마크 */
+/* 마크 app */
 [data-app]::before{content: attr(data-app) 'APP'; display: inline-block; font-size: 15px; font-weight: 700; line-height: 26px; padding-inline: 10px;}
 [data-app="이용자"]::before{color: #1f76db; background-color: #ddedff;}
 [data-app="선장"]::before{color: #445fe5; background-color: #ebeefb;}
 
 
-a[class]{font-size: 16px; font-weight: 500; width: 330px; line-height: 60px; padding-left: 30px; border: 1px solid var(--colorLine); box-sizing: border-box; display: flex; align-items: center;
+/* 앱 다운로드 버튼 */
+a[class^="icon"]{font-size: 16px; font-weight: 500; width: 330px; line-height: 60px; padding-left: 30px; border: 1px solid var(--colorLine); box-sizing: border-box; display: flex; align-items: center;
     &::before{content: ''; --width: 26px; width: var(--width); aspect-ratio: 1; background:url('../images/icon-app.png') no-repeat left top calc(var(--styleIdx) * var(--width) * -1) / 100%; margin-right: 20px;}
-    &.google{--styleIdx: 0; margin-bottom: 15px;}
-    &.apply{--styleIdx: 1;}
+    &[class$="google"]{--styleIdx: 0; margin-bottom: 15px;}
+    &[class$="apply"]{--styleIdx: 1;}
 
 }
 
