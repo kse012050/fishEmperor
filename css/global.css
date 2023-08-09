@@ -26,7 +26,7 @@ a[class^="icon"]{font-size: 16px; font-weight: 500; width: 330px; line-height: 6
 }
 
 
-.fullBg{background-color: var(--bg); text-align: center; box-shadow: 0 0 0 100vmax var(--bg); clip-path: inset(0 -100vmax);}
+.fullBg{background-color: var(--bg); box-shadow: 0 0 0 100vmax var(--bg); clip-path: inset(0 -100vmax);}
 
 
 /* 해더 */
