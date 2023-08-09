@@ -72,7 +72,7 @@
             & p{font-size: 18px; line-height: 22.5px; margin-bottom: 40px;}
         }
     }
-    & hr{--bg: var(--colorLine); border: none; height: 1px;}
+    & hr{--bg: var(--colorLine); border: none; height: 1px; margin: 0;}
     & h3{font-size: 40px; font-weight: 700; line-height: 48px;}
     & mark{color: var(--colorPoint);}
     & .mainFunc{text-align: center;
@@ -134,8 +134,9 @@
 /* 어복황제M */
 .emperorPage{--colorPoint: var(--colorPoint02);
     & .homeArea::before{background-image: url('../gif/gif02.gif');}
-    & .mainFunc{
+    & .mainFunc{padding-bottom: 70px;
         & mark::before{background-image: url('../images/icon-fingerprint.png');}
+        & p{margin-bottom: 20px;}
         & div{max-width: 1500px; height: 562px; margin-inline: auto; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding: 79px; box-sizing: border-box;
             background-image: url('../images/emperor-main.png'); background-repeat: no-repeat; background-position: center; background-size: cover;
             & b{font-size: 16px; font-weight: 500; line-height: 21.5px; margin-bottom: 20px;}
@@ -144,7 +145,8 @@
     }
     & .detailFunc{
         & [data-tab="btns"] > li button::before{background-image: url('../images/icon-emperor.png');}
-        & .smartArea{display: flex; flex-wrap: wrap; --spacing: 30px; gap: var(--spacing); padding: var(--spacing); background-color: white;
+        & .smartArea{display: flex; flex-wrap: wrap; --spacing: 30px; gap: var(--spacing); padding: var(--spacing); background-color: white; position: relative;
+            &::before{content: ''; position: absolute; inset: 0 var(--spacing) auto; border-top: 1px dashed var(--colorLine);}
             & li{width: calc((100% - var(--spacing)) / 2);
                 & b{font-size: 15px; font-weight: 700; line-height: 18px; display: flex; align-items: center;
                     &::before{content: ''; --width: 24px; width: var(--width); aspect-ratio: 1; 
@@ -155,6 +157,7 @@
             }
         }
         & [data-tab="btns"] > li.active .smartArea{color: white; background-color: #374dba;
+            &::before{display: none;}
             & li{
                 & b::before{background-position-x: calc(var(--width) * -1);}
                 & p{color: rgba(255, 255, 255, 0.8);}

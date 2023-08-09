@@ -1,7 +1,8 @@
 
 /* 컨텐츠 사이즈 */
 .contentsSize{max-width: 1180px; margin-inline: auto;}
-.contentsBlcok{padding-block: 120px 140px;}
+.contentsBlcok, .contentsTop{padding-top: 120px;}
+.contentsBlcok{padding-bottom: 140px;}
 
 
 /* 마크 app */
