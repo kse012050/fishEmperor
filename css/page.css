@@ -1,0 +1,61 @@
+
+/* 메인 - 서비스 소개 */
+.mainPage{
+    /* 메인 - 서비스 소개 - 홈 */
+    & .homeArea{background: url('../images/main-bg.png') no-repeat center / cover; padding-block: 120px 124px;
+        & > div{display: flex; justify-content: space-between; align-items: flex-start;
+            & .textArea{padding-top: 120px; color: white;
+                & h2{font-size: 60px; font-weight: 700; line-height: 77px; max-width: 325px;}
+                & ul{margin-top: 80px;
+                    & li{display: flex; align-items: flex-start;
+                        &:not(:last-child){margin-bottom: 40px;}
+                        & [class*='img-app']{--width: 80px; margin-right: 25px;}
+                        & div{padding-top: 5px;
+                            & small{display: block; font-size: 15px; font-weight: 500; color: rgba(255, 255, 255, 0.7); line-height: 20px; margin-bottom: 7px;}
+                            & b{font-size: 18px; font-weight: 700; line-height: 21px;}
+                        }
+                    }
+                }
+            }
+            & .gifArea{width: 55.9322%; display: flex; justify-content: space-between; align-items: flex-start;
+                & img{width: 45.4545%; border-radius: 20px;
+                    &:last-child{margin-top: 140px;}
+                }
+            }
+        }
+    }
+
+    /* 메인 - 서비스 소개 - 홈 */
+    & .appArea{display: flex; justify-content: center; text-align: center;
+        & li{flex: 1;
+            &:not(:last-child){border-right: 1px solid var(--colorLine);}
+            &::before{margin-bottom: 20px;}
+            & strong{display: block; font-size: 40px; font-weight: 700; line-height: 51.5px; margin-bottom: 50px;}
+            & [class*='img-app']{--width: 160px; margin-bottom: 40px; margin: 0 auto 40px;}
+            & b{display: block; font-size: 24px; font-weight: 700; line-height: 29px; margin-bottom: 20px;}
+            & p{font-size: 18px; font-weight: 300; color: var(--colorFont01); line-height: 22.5px; margin-bottom: 60px;}
+            & a{
+                &[class]{margin-inline: auto;}
+                &:last-child{font-size: 14px; font-weight: 700; color: var(--colorFont02); text-decoration: underline; margin-top: 40px;}
+            }
+        }
+    }
+
+    /* 메인 - 서비스 소개 - 파트너스 */
+    & .partnersArea{
+        &.fullBg{--bg: var(--colorPlane02);}
+        & h3{font-size: 40px; font-weight: 700; line-height: 48px; margin-bottom: 20px;}
+        & p{font-size: 18px; font-weight: 300; color: var(--colorFont01); line-height: 20px; margin-bottom: 60px;}
+        & ul{display: flex; flex-wrap: wrap; justify-content: center; gap: 40px calc((100% - 800px) / 3); 
+            & li{--width: 200px; width: var(--width); aspect-ratio: 2 / 1; background: url('../images/main-fitness.png') no-repeat left top calc(var(--styleIdx) * var(--width) / 2 * -1) / 100%; text-indent: -9999px;}
+        }
+    }
+
+    /* 메인 - 서비스 소개 - 문의 */
+    & .inquiryArea{display: flex; align-items: center; padding-block: 42px; color: white; font-weight: 700;
+        &.fullBg{--bg: var(--colorPoint01);}
+        &::before{content: ''; width: 96px; aspect-ratio: 1; background: url('../images/icon-inquiry.png') no-repeat center / cover; margin-right: 80px;}
+        & p{font-size: 24px;}
+        & a{font-size: 16px; width: 226px; line-height: 60px; background-color: rgba(255, 255, 255, 0.2); margin-left: auto;}
+    }
+}
