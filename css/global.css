@@ -52,7 +52,7 @@ header{position: sticky; left: 0; top: 0; background-color: white; border-bottom
     }
     & nav ul{display: flex; justify-content: center; align-items: center; gap: 90px;
         & li{font-size: 18px; font-weight: 700; color: #bbb; line-height: 80px;
-            &.active{color: #1f76db;}
+            &.active, :hover{color: #1f76db;}
         }
     }
 }
