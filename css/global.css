@@ -30,6 +30,21 @@ a[class^="icon"]{font-size: 16px; font-weight: 500; width: 330px; line-height: 6
 .fullBg{background-color: var(--bg); box-shadow: 0 0 0 100vmax var(--bg); clip-path: inset(0 -100vmax);}
 hr.fullBg{--bg: var(--colorLine); border: none; height: 1px; margin: 0;}
 
+
+/* 페이저 */
+.pagerBox{display: flex; justify-content: center; align-items: center; margin-top: 40px;
+    & button{--width: 24px; width: var(--width); aspect-ratio: 1; background: url('../images/icon-pager.png') no-repeat left top calc(var(--styleIdx) * var(--width) * -1) / 100%; text-indent: -9999px;
+        &:not(:last-of-type){margin-right: 10px;}
+    }
+    & ol{margin-inline: 10px; display: flex; align-items: center; gap: 25px;
+        & li{
+            & a{font-size: 16px; font-weight: 700; color: var(--colorFont03);}
+            &.active a, a:hover{color: var(--colorFont); text-decoration: underline;}
+        }
+    }
+}
+
+
 /* 해더 */
 header{position: sticky; left: 0; top: 0; background-color: white; border-bottom: 1px solid var(--colorLine); z-index: 100;
     & h1{position: absolute; left: 30px; top: 50%; transform: translateY(-50%); width: 62px;

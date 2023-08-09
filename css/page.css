@@ -199,3 +199,26 @@
         }
     }
 }
+
+
+/* FAQ */
+.faqPage{
+    & h2{font-size: 40px; font-weight: 700; line-height: 48px; text-align: center; margin-bottom: 60px;}
+    & [data-formData="btns"]{display: flex; justify-content: center; align-items: center; margin-bottom: 40px;
+        & li{
+            & button{font-size: 20px; font-weight: 700; line-height: 24px; padding-inline: 30px;}
+            &:is(.active, :hover) button{color: var(--colorPoint01);}
+        }
+    }
+    & [data-formData="contents"]{border-top: 1px solid var(--colorFont);
+        & li{border-bottom: 1px solid var(--colorLine);
+            & button{width: 100%; font-size: 18px; font-weight: 300; line-height: 100px; text-align: left; padding-inline: 30px 20px; position: relative;
+                &::after{content: ''; position: absolute; width: 42px; aspect-ratio: 1; right: 20px; top: 50%; transform: translateY(-50%); background: url('../images/arrow-dwon.png') no-repeat center / cover;}
+            }
+            & pre{display: none; font-size: 16px; font-weight: 300; line-height: 24.25px; margin: 0; padding: 40px 30px 80px; background-color: #f8f8f8;}
+
+            &.active pre{display: block;}
+            &.active button, button:hover{font-weight: 700;}
+        }
+    }
+}
