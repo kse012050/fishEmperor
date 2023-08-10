@@ -13,7 +13,7 @@ $(document).ready(function(){
     })
 
     function contentChange(isMedia){
-        $('[data-content]').each(function(){
+        $('[data-content]').each(function(i){
             const content = $(this);
             const attrValue = $(this).attr('data-content')
             $(`[data-${attrValue}]`).each(function(){
@@ -85,11 +85,21 @@ function tab(){
 // 어복황제
 function fishPage(){
     var fishSwiper = new Swiper(".fishSwiper", {
-        slidesPerView: 3,
-        navigation: {
-            prevEl: '.btn-prev',
-            nextEl: '.btn-next',
-        },
+        slidesPerView: 1,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween:21.5
+            },
+            950: {
+                slidesPerView: 3,
+                spaceBetween: 60,
+                navigation: {
+                    prevEl: '.btn-prev',
+                    nextEl: '.btn-next',
+                }
+            }
+        }
     });
 }
 

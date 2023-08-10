@@ -82,3 +82,66 @@ footer{ --block: 40px; padding-block: var(--block); position: relative;
         & a{font-size: 16px; width: 226px; line-height: 60px; margin-left: auto;}
     }
 }
+
+
+/* 어복황제, 어복황제M */
+.fishPage, .emperorPage{
+    & .homeArea{display: flex; justify-content: center; align-items: center;
+        &::before{content: ''; width: 300px; aspect-ratio: 300 / 580; background-position: center; background-size: cover; margin-right: 10%; border-radius: 30px; box-shadow: 0 0 60px 0px rgba(0,0,0,0.1);}
+        & > div{
+            & h2{font-size: 50px; line-height: 62px; margin-bottom: 60px;}
+            & mark{font-size: 24px; line-height: 29px;}
+            & p{font-size: 18px; line-height: 22.5px;}
+        }
+    }
+    & h3{font-size: 40px; line-height: 48px;}
+    & .mainFunc{
+        & h3{margin-bottom: 37px;}
+        & mark{font-size: 24px; 
+            &::before{width: 36px; margin-right: 12px;}
+        }
+        & p{font-size: 18px; line-height: 22.5px;}
+    }
+    & .detailFunc{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+        & h3{width: 100%;}
+        & [data-tab="btns"]{max-width: 40.6779%;
+            & > li{
+                &:not(:last-child){margin-bottom: 15px;}
+                & button{text-align: left; padding-block: 30px; padding-right: 30px; background-color: white; position: relative;
+                    &::before{content: ''; position: absolute; top: 50%; transform: translateY(-50%); 
+                        --width: 36px; width: var(--width); aspect-ratio: 1; background-repeat: no-repeat; background-position-x: 0; background-position-y: calc(var(--styleIdx) * var(--width) * -1); background-size: 200%;
+                    }
+                    & b{display: block; margin-bottom: 15px;}
+                    & span{font-size: 15px; font-weight: 500; line-height: 20.6666px;}
+                }
+                &.active button, button:hover{ background-color: var(--colorPoint); color: white;
+                    &::before{background-position-x: calc(var(--width) * -1);}
+                }
+                &.active button::after{content: ''; position: absolute; right: 0; top: 50%; transform: translate(100%, -50%); border-width: 12px 0 12px 16px; border-style: solid; border-color: transparent var(--colorPoint);}
+            }
+        }
+        & [data-tab="contents"]{width: 50%;}
+    }
+}
+
+/* 어복황제 */
+.fishPage{
+    & .homeArea{
+        &::before{background-image: url('../gif/gif01.gif');}
+    }
+    & .mainFunc{
+        & p{margin-bottom: 60px;}
+        & .fishSwiper{max-width: 1020px; width: 81.05%;
+            & .swiper-wrapper{
+                & .swiper-slide{border-radius: 30px;
+                    & img{opacity: 0.3;}
+                    &:is(.swiper-slide-active, .swiper-slide-next, .swiper-slide-next + div) img{opacity: 1;}
+                }
+            }
+            & [class^="btn"]{--width: 80px; width: var(--width); aspect-ratio: 1; background: url('../images/icon-slider.png') no-repeat left top calc(var(--styleIdx) * var(--width) * -1)/ 100%; position: absolute; top: 50%; transform: translateY(-50%); z-index: 10; cursor: pointer;
+                &[class$="prev"]{--styleIdx: 0; left: calc((var(--width) + 4%) * -1);}
+                &[class$="next"]{--styleIdx: 1; right: calc((var(--width) + 4%) * -1);}
+            }
+        }
+    }
+}

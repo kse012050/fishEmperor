@@ -43,7 +43,7 @@
         & [data-tab="btns"]{
             & > li{
                 & button{
-                    &::before{left: 50px;}
+                    &::before{left: 50px; padding-left: 126px;}
                 }
             }
         }

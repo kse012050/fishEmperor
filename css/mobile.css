@@ -1,6 +1,6 @@
 /* 글로벌 */
 /* 컨텐츠 사이즈 */
-.contentsSize{max-width: 500px; margin-inline: auto; width: calc(100% - 40px);}
+.contentsSize{max-width: 500px; margin-inline: auto; width: calc(100% - var(--mobileSpacing) * 2);}
 .contentsBlcok, .contentsTop{padding-top: 60px;}
 .contentsBlcok{padding-bottom: 60px;}
 
@@ -59,7 +59,7 @@ footer{padding-block: 30px;
                 }
             }
             & .gifArea{max-width: 252px; margin-inline: auto; margin-bottom: 67px;
-                & img{width: 45.6349%; border-radius: 15px;
+                & img{width: 45.6349%; border-radius: 20px;
                     &:last-child{margin-top: 53px;}
                 }
             }
@@ -90,5 +90,60 @@ footer{padding-block: 30px;
         &::before{display: inline-block; margin-bottom: 30px;}
         & p{font-size: 18px; line-height: 23.5px; max-width: 162px; margin: 0 auto 30px;}
         & a{font-size: 15px; width: 220px; line-height: 50px;}
+    }
+}
+
+
+/* 어복황제, 어복황제M */
+.fishPage, .emperorPage{
+    & .homeArea{text-align: center;
+        & > div{
+            & h2{font-size: 34px; line-height: 44px; margin-bottom: 40px;
+                &::after{display: block; content: ''; width: 198px; aspect-ratio: 198 / 382; background-position: center; background-size: cover; margin-right: 10%; border-radius: 20px; box-shadow: 0 0 60px 0px rgba(0,0,0,0.1); margin: 40px auto 0;}
+            }
+            & mark{font-size: 20px; line-height: 24px;}
+            & p{font-size: 15px; line-height: 20.6667px; max-width: 195px; margin-inline: auto;}
+            & a{margin-inline: auto;}
+        }
+    }
+    & h3{font-size: 32px; line-height: 38px; margin-bottom: 30px;}
+    & .mainFunc{
+        & mark{font-size: 20px; 
+            &::before{width: 26px; margin-right: 7px;}
+        }
+        & p{font-size: 15px; line-height: 20px;}
+    }
+}
+
+/* 어복황제 */
+.fishPage{
+    & .homeArea{
+        & > div{
+            & h2{
+                &::after{background-image: url('../gif/gif01.gif');}
+            }
+        }
+    }
+    & .mainFunc{
+        & p{margin-bottom: 40px;}
+        & .fishSwiper{width: 197px; margin-inline: auto;
+            & .swiper-wrapper{
+                & .swiper-slide{border-radius: 20px;
+                    & img{opacity: 0.3;}
+                    &.swiper-slide-active img{opacity: 1;}
+                }
+            }
+            & [class^="btn"]{display: none;}
+        }
+    }
+    & .detailFunc{text-align: center;
+        & [data-tab="btns"]{display: flex; white-space: nowrap; overflow: auto; transform: translateX(calc(var(--mobileSpacing) * -1)); width: calc(100% + var(--mobileSpacing) * 2); padding-inline: var(--mobileSpacing); box-sizing: border-box; padding-bottom: 11px; margin-bottom: 38px;
+            /* &::-webkit-scrollbar{display: none;} */
+            & li{color: var(--colorFont03);
+                &:not(:last-child){margin-right: 30px;}
+                &.active button b{color: var(--colorPoint); text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 10px;}
+            }
+        }
+        & [data-tab="contents"] div span{display: block; font-size: 15px; font-weight: 300; line-height: 20.6667px; text-align: center; max-width: 266px; margin-inline: auto; margin-bottom: 40px;}
     }
 }
