@@ -42,8 +42,8 @@
     & .detailFunc{
         & [data-tab="btns"]{
             & > li{
-                & button{
-                    &::before{left: 50px; padding-left: 126px;}
+                & button{padding-left: 126px;
+                    &::before{left: 50px;}
                 }
             }
         }

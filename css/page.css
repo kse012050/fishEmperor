@@ -93,7 +93,6 @@
 
 /* 어복황제 */
 .fishPage{--colorPoint: var(--colorPoint01);
-    & .homeArea::before{background-image: url('../gif/gif01.gif');}
     & .mainFunc{overflow: hidden;
         & mark::before{background-image: url('../images/icon-calender.png');}
         & .fishSwiper{margin-inline: auto; overflow: visible;
@@ -101,10 +100,6 @@
                 & .swiper-slide{box-shadow: 0 0 60px 0px rgba(0,0,0,0.1);
                     & img{width: 100%;}
                 }
-            }
-            & [class^="btn"]{--width: 80px; width: var(--width); aspect-ratio: 1; background: url('../images/icon-slider.png') no-repeat left top calc(var(--styleIdx) * var(--width) * -1)/ 100%; position: absolute; top: 50%; transform: translateY(-50%); z-index: 10; cursor: pointer;
-                &[class$="prev"]{--styleIdx: 0; left: calc((var(--width) + 4%) * -1);}
-                &[class$="next"]{--styleIdx: 1; right: calc((var(--width) + 4%) * -1);}
             }
         }
     }
@@ -114,21 +109,18 @@
 
 /* 어복황제M */
 .emperorPage{--colorPoint: var(--colorPoint02);
-    & .homeArea::before{background-image: url('../gif/gif02.gif');}
     & .mainFunc{
         & mark::before{background-image: url('../images/icon-fingerprint.png');}
         & p{margin-bottom: 20px;}
-        & div{max-width: 1500px; height: 562px; margin-inline: auto; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding: 79px; box-sizing: border-box;
-            background-image: url('../images/emperor-main.png'); background-repeat: no-repeat; background-position: center; background-size: 100%;
-            & b{font-size: 16px; font-weight: 500; line-height: 21.5px; margin-bottom: 20px;}
-            & small{font-size: 15px; font-weight: 300; line-height: 19px; color: var(--colorFont02);}
+        & div{
+            & b{font-weight: 500; margin-bottom: 20px;}
+            & small{font-weight: 300; color: var(--colorFont02);}
         }
     }
     & .detailFunc{
         & h3{margin-bottom: 60px;}
         & [data-tab="btns"] > li button::before{background-image: url('../images/icon-emperor.png');}
-        & .smartArea{display: flex; flex-wrap: wrap; --spacing: 30px; gap: var(--spacing); padding: var(--spacing); background-color: white; position: relative;
-            &::before{content: ''; position: absolute; inset: 0 var(--spacing) auto; border-top: 1px dashed var(--colorLine);}
+        & .smartArea{display: flex; flex-wrap: wrap; --spacing: 30px; position: relative;
             & li{width: calc((100% - var(--spacing)) / 2);
                 & b{font-size: 15px; font-weight: 700; line-height: 18px; display: flex; align-items: center;
                     &::before{content: ''; --width: 24px; width: var(--width); aspect-ratio: 1; 

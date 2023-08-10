@@ -1,8 +1,7 @@
 /* 글로벌 */
 /* 컨텐츠 사이즈 */
-.contentsSize{max-width: 500px; margin-inline: auto; width: calc(100% - var(--mobileSpacing) * 2);}
-.contentsBlcok, .contentsTop{padding-top: 60px;}
-.contentsBlcok{padding-bottom: 60px;}
+.contentsSize, .contentsTop{max-width: 500px; margin-inline: auto; width: calc(100% - var(--mobileSpacing) * 2);}
+.contentsBlcok, .contentsTop{padding-block: 60px;}
 
 /* 앱 다운로드 버튼 */
 a[class^="icon"]::before{margin-right: 15px;}
@@ -113,6 +112,19 @@ footer{padding-block: 30px;
         }
         & p{font-size: 15px; line-height: 20px;}
     }
+    & .detailFunc{text-align: center;
+        & [data-tab="btns"]{display: flex; white-space: nowrap; overflow: auto; transform: translateX(calc(var(--mobileSpacing) * -1)); width: calc(100% + var(--mobileSpacing) * 2); padding-inline: var(--mobileSpacing); box-sizing: border-box; padding-bottom: 11px; margin-bottom: 38px;
+            /* &::-webkit-scrollbar{display: none;} */
+            & li{color: var(--colorFont03);
+                &:not(:last-child){margin-right: 30px;}
+                &.active button b{color: var(--colorPoint); text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 10px;}
+            }
+        }
+        & [data-tab="contents"] div{
+            & img{max-width: 330px;}
+            & span{display: block; font-size: 15px; font-weight: 300; line-height: 20.6667px; max-width: 266px; margin-inline: auto; margin-bottom: 40px;}
+        }
+    }
 }
 
 /* 어복황제 */
@@ -136,14 +148,26 @@ footer{padding-block: 30px;
             & [class^="btn"]{display: none;}
         }
     }
-    & .detailFunc{text-align: center;
-        & [data-tab="btns"]{display: flex; white-space: nowrap; overflow: auto; transform: translateX(calc(var(--mobileSpacing) * -1)); width: calc(100% + var(--mobileSpacing) * 2); padding-inline: var(--mobileSpacing); box-sizing: border-box; padding-bottom: 11px; margin-bottom: 38px;
-            /* &::-webkit-scrollbar{display: none;} */
-            & li{color: var(--colorFont03);
-                &:not(:last-child){margin-right: 30px;}
-                &.active button b{color: var(--colorPoint); text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 10px;}
+}
+
+/* 어복황제M */
+.emperorPage{
+    & .homeArea{
+        & > div{
+            & h2{
+                &::after{background-image: url('../gif/gif02.gif');}
             }
         }
-        & [data-tab="contents"] div span{display: block; font-size: 15px; font-weight: 300; line-height: 20.6667px; text-align: center; max-width: 266px; margin-inline: auto; margin-bottom: 40px;}
+    }
+    & .mainFunc{
+        & div{
+            &::before{content: ''; display: block; aspect-ratio: 320 / 910; background: url('../images/emperor-main-m.png') no-repeat center / cover; max-width: 320px; margin: 0 auto 20px;}
+            & b{display: block; font-size: 15px; line-height: 20px;}
+            & small{font-size: 14px; line-height: 18px; }
+        }
+    }
+    & .detailFunc{
+        & [data-tab="contents"] div img{margin-bottom: 40px;}
+        & .smartArea{text-align: left; gap: var(--spacing) 20px; max-width: 330px; margin-inline: auto;}
     }
 }

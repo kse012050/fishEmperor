@@ -145,3 +145,27 @@ footer{ --block: 40px; padding-block: var(--block); position: relative;
         }
     }
 }
+
+/* 어복황제M */
+.emperorPage{
+    & .homeArea::before{background-image: url('../gif/gif02.gif');}
+    & .mainFunc{
+        & div{max-width: 1500px; height: 562px; margin-inline: auto; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding: 79px; box-sizing: border-box;
+            background-image: url('../images/emperor-main.png'); background-repeat: no-repeat; background-position: center; background-size: 100%;
+            & b{font-size: 16px; line-height: 21.5px;}
+            & small{font-size: 15px; line-height: 19px; }
+        }
+    }
+    & .detailFunc{
+        & [data-tab="btns"] > li.active .smartArea{color: white; background-color: #374dba;
+            &::before{display: none;}
+            & li{
+                & b::before{background-position-x: calc(var(--width) * -1);}
+                & p{color: rgba(255, 255, 255, 0.8);}
+            }
+        }
+        & .smartArea{padding: var(--spacing); gap: var(--spacing); background-color: white;
+            &::before{content: ''; position: absolute; inset: 0 var(--spacing) auto; border-top: 1px dashed var(--colorLine);}
+        }
+    }
+}
