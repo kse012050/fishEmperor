@@ -13,6 +13,7 @@ br.desktop{display: none;}
 
 
 /* 해더 */
+body:has(nav.active){overflow: hidden;}
 header{display: flex; justify-content: space-between; align-items: center; padding: 11px 12px;
     & h1 a{width: 60px; aspect-ratio: 60 / 36; background-image: url('../images/logo-m.png');}
     & nav{display: none; position: fixed; inset: 0; background-color: rgba(0, 0, 0, 0.7); z-index: 101;
