@@ -1,0 +1,37 @@
+/* 글로벌 */
+
+
+
+/* 페이지 */
+/* 메인 - 서비스 소개 */
+.mainPage{
+    /* 메인 - 서비스 소개 - 홈 */
+    & .homeArea{padding-block: 80px 100px;
+        & > div{
+            & .textArea{
+                & h2{font-size: 54px; line-height: 66.6666px;}
+                & ul{margin-top: 70px;
+                    & li{
+                        &:not(:last-child){margin-bottom: 25px;}
+                        & div{padding-top: 6px;
+                            & small{font-size: 14px; line-height: 17.3333px; margin-bottom: 10px;}
+                            & b{font-size: 16px; line-height: 19px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* 메인 - 서비스 소개 - 홈 */
+    & .appArea{
+        & li{
+            & [class*='img-app']{--width: 140px;}
+        }
+    }
+
+    /* 메인 - 서비스 소개 - 문의 */
+    & .inquiryArea{
+        &::before{margin-right: 40px;}
+    }
+}

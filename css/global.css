@@ -1,6 +1,6 @@
 
 /* 컨텐츠 사이즈 */
-.contentsSize{max-width: 1180px; margin-inline: auto;}
+.contentsSize{max-width: 1180px; margin-inline: auto; width: calc(100% - 60px);}
 .contentsBlcok, .contentsTop{padding-top: 120px;}
 .contentsBlcok{padding-bottom: 140px;}
 

@@ -5,3 +5,5 @@
 @import url('reset.css');
 @import url('global.css');
 @import url('page.css');
+@import url('desktop.css') screen and (1180px <= width);
+@import url('tablet.css') screen and (width < 1180px);

@@ -2,24 +2,24 @@
 /* 메인 - 서비스 소개 */
 .mainPage{
     /* 메인 - 서비스 소개 - 홈 */
-    & .homeArea{background: url('../images/main-bg.png') no-repeat center / cover; padding-block: 120px 124px;
-        & > div{display: flex; justify-content: space-between; align-items: flex-start;
-            & .textArea{padding-top: 120px; color: white;
-                & h2{font-size: 60px; font-weight: 700; line-height: 77px; max-width: 325px;}
-                & ul{margin-top: 80px;
+    & .homeArea{background: url('../images/main-bg.png') no-repeat center / cover;
+        & > div{display: flex; justify-content: space-between; align-items: center;
+            & .textArea{color: white;
+                & h2{font-weight: 700; max-width: 325px;}
+                & ul{
                     & li{display: flex; align-items: flex-start;
                         &:not(:last-child){margin-bottom: 40px;}
                         & [class*='img-app']{--width: 80px; margin-right: 25px;}
-                        & div{padding-top: 5px;
-                            & small{display: block; font-size: 15px; font-weight: 500; color: rgba(255, 255, 255, 0.7); line-height: 20px; margin-bottom: 7px;}
-                            & b{font-size: 18px; font-weight: 700; line-height: 21px;}
+                        & div{
+                            & small{display: block; font-weight: 500; color: rgba(255, 255, 255, 0.7);}
+                            & b{font-weight: 700;}
                         }
                     }
                 }
             }
             & .gifArea{width: 55.9322%; display: flex; justify-content: space-between; align-items: flex-start;
                 & img{width: 45.4545%; border-radius: 30px;
-                    &:last-child{margin-top: 140px;}
+                    &:last-child{margin-top: 21.2121%;}
                 }
             }
         }
@@ -31,7 +31,7 @@
             &:not(:last-child){border-right: 1px solid var(--colorLine);}
             &::before{margin-bottom: 20px;}
             & strong{display: block; font-size: 40px; font-weight: 700; line-height: 51.5px; margin-bottom: 50px;}
-            & [class*='img-app']{--width: 160px; margin-bottom: 40px; margin: 0 auto 40px;}
+            & [class*='img-app']{margin-bottom: 40px; margin: 0 auto 40px;}
             & b{display: block; font-size: 24px; font-weight: 700; line-height: 29px; margin-bottom: 20px;}
             & p{font-size: 18px; font-weight: 300; color: var(--colorFont01); line-height: 22.5px; margin-bottom: 60px;}
             & a{
@@ -54,9 +54,9 @@
     /* 메인 - 서비스 소개 - 문의 */
     & .inquiryArea{display: flex; align-items: center; padding-block: 42px; color: white; font-weight: 700;
         &.fullBg{--bg: var(--colorPoint01);}
-        &::before{content: ''; width: 96px; aspect-ratio: 1; background: url('../images/icon-inquiry.png') no-repeat center / cover; margin-right: 80px;}
+        &::before{content: ''; width: 96px; aspect-ratio: 1; background: url('../images/icon-inquiry.png') no-repeat center / cover;}
         & p{font-size: 24px;}
-        & a{font-size: 16px; width: 226px; line-height: 60px; background-color: rgba(255, 255, 255, 0.2); margin-left: auto;}
+        & a{font-size: 16px; width: 226px; line-height: 60px; text-align: center; background-color: rgba(255, 255, 255, 0.2); margin-left: auto;}
     }
 }
 
