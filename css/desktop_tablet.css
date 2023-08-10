@@ -5,8 +5,12 @@
 .contentsBlcok{padding-bottom: 140px;}
 
 /* 앱 다운로드 버튼 */
-a[class^="icon"]::before{margin-right: 20px;}
+a[class^="icon"]{max-width: 330px;
+    &::before{margin-right: 20px;}
+}
 
+/* mobile br */
+br.mobile{display: none;}
 
 /* 해더 */
 header{

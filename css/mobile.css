@@ -4,7 +4,12 @@
 .contentsBlcok, .contentsTop{padding-block: 60px;}
 
 /* 앱 다운로드 버튼 */
-a[class^="icon"]::before{margin-right: 15px;}
+a[class^="icon"]{max-width: 320px;
+    &::before{margin-right: 15px;}
+}
+
+/* pc br */
+br.desktop{display: none;}
 
 
 /* 해더 */
@@ -113,7 +118,7 @@ footer{padding-block: 30px;
         & p{font-size: 15px; line-height: 20px;}
     }
     & .detailFunc{text-align: center;
-        & [data-tab="btns"]{display: flex; white-space: nowrap; overflow: auto; transform: translateX(calc(var(--mobileSpacing) * -1)); width: calc(100% + var(--mobileSpacing) * 2); padding-inline: var(--mobileSpacing); box-sizing: border-box; padding-bottom: 11px; margin-bottom: 38px;
+        & [data-tab="btns"]{display: flex; white-space: nowrap; overflow: auto; transform: translateX(calc(var(--mobileSpacing) * -1)); width: calc(100% + var(--mobileSpacing) * 2); padding-inline: var(--mobileSpacing); box-sizing: border-box; padding-bottom: 11px; margin-inline: auto; margin-bottom: 38px; 
             /* &::-webkit-scrollbar{display: none;} */
             & li{color: var(--colorFont03);
                 &:not(:last-child){margin-right: 30px;}
@@ -148,6 +153,9 @@ footer{padding-block: 30px;
             & [class^="btn"]{display: none;}
         }
     }
+    & .detailFunc{
+        & [data-tab="btns"]{max-width: 487px;}
+    }
 }
 
 /* 어복황제M */
@@ -167,6 +175,7 @@ footer{padding-block: 30px;
         }
     }
     & .detailFunc{
+        & [data-tab="btns"]{max-width: 385px;}
         & [data-tab="contents"] div img{margin-bottom: 40px;}
         & .smartArea{text-align: left; gap: var(--spacing) 20px; max-width: 330px; margin-inline: auto;}
     }
@@ -175,7 +184,7 @@ footer{padding-block: 30px;
 
 /* 회사소개 */
 .aboutUsPage{
-    & .homeArea{padding-block: 60px;
+    & .homeArea{padding: 60px var(--mobileSpacing);
         & img{width: 92px;}
         & strong{font-size: 20px; line-height: 24px;}
         & p{font-size: 15px; line-height: 21.2px;}

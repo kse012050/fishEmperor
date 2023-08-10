@@ -6,7 +6,7 @@
 
 
 /* 앱 다운로드 버튼 */
-a[class^="icon"]{font-size: 16px; font-weight: 500; max-width: 330px; line-height: 60px; padding-left: 30px; border: 1px solid var(--colorLine); box-sizing: border-box; display: flex; align-items: center;
+a[class^="icon"]{font-size: 16px; font-weight: 500; line-height: 60px; padding-left: 30px; border: 1px solid var(--colorLine); box-sizing: border-box; display: flex; align-items: center;
     &::before{content: ''; --width: 26px; width: var(--width); aspect-ratio: 1; background:url('../images/icon-app.png') no-repeat left top calc(var(--styleIdx) * var(--width) * -1) / 100%;}
     &[class$="google"]{--styleIdx: 0; margin-bottom: 15px;}
     &[class$="apply"]{--styleIdx: 1;}
