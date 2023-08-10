@@ -6,4 +6,6 @@
 @import url('global.css');
 @import url('page.css');
 @import url('desktop.css') screen and (1180px <= width);
-@import url('tablet.css') screen and (width < 1180px);
+@import url('tablet.css') screen and ( 950px <= width < 1180px);
+@import url('desktop_tablet.css') screen and ( 950px <= width);
+@import url('mobile.css') screen and (width < 950px);

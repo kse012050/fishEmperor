@@ -1,0 +1,84 @@
+/* 글로벌 */
+/* 컨텐츠 사이즈 */
+.contentsSize{max-width: 1180px; margin-inline: auto; width: calc(100% - 60px);}
+.contentsBlcok, .contentsTop{padding-top: 120px;}
+.contentsBlcok{padding-bottom: 140px;}
+
+/* 앱 다운로드 버튼 */
+a[class^="icon"]::before{margin-right: 20px;}
+
+
+/* 해더 */
+header{
+    & h1{position: absolute; left: 30px; top: 50%; transform: translateY(-50%); 
+        & a{width: 62px; aspect-ratio: 62 / 60; background-image: url('../images/logo.png');}
+    }
+    & nav ul{display: flex; justify-content: center; align-items: center; gap: 90px;
+        & li{font-size: 18px; color: #bbb; line-height: 80px;
+            &.active, :hover{color: #1f76db;}
+        }
+    }
+    & button{display: none;}
+}
+
+/* 푸터 */
+footer{ --block: 40px; padding-block: var(--block); position: relative;
+    & > img{position: absolute; right: 0; top: var(--block); width: 49px;}
+    & address{font-size: 15px; line-height: 18px;
+        & p{margin-bottom: 7px;}
+        & div{font-size: 14px;
+            & b{margin-right: 20px;}
+        }
+    }
+    & > p{font-size: 14px; line-height: 17px;}
+}
+
+
+/* 페이지 */
+/* 메인 - 서비스 소개 */
+.mainPage{
+    /* 메인 - 서비스 소개 - 홈 */
+    & .homeArea{
+        & > div{display: flex; justify-content: space-between; align-items: center;
+            & .textArea{
+                & ul{
+                    & li{
+                        &:not(:last-child){margin-bottom: 40px;}
+                        & [class*='img-app']{--width: 80px; margin-right: 25px;}
+                    }
+                }
+            }
+            & .gifArea{width: 55.9322%;
+                & img{width: 45.4545%; border-radius: 30px;
+                    &:last-child{margin-top: 21.2121%;}
+                }
+            }
+        }
+    }
+
+    /* 메인 - 서비스 소개 - 홈 */
+    & .appArea{display: flex; justify-content: center; text-align: center;
+        & li{
+            &:not(:last-child){border-right-width: 1px;}
+            & strong{font-size: 40px; line-height: 51.5px; margin-bottom: 50px;}
+            & [class*='img-app']{--width: 140px;}
+            & b{font-size: 24px; line-height: 29px;}
+            & p{font-size: 18px; line-height: 22.5px; margin-bottom: 60px;}
+        }
+    }
+
+    /* 메인 - 서비스 소개 - 파트너스 */
+    & .partnersArea{
+        & h3{font-size: 40px; line-height: 48px;}
+        & p{font-size: 18px; margin-bottom: 60px;}
+        & ul{gap: 40px calc((100% - 800px) / 3); 
+            & li{--width: 200px; aspect-ratio: 2 / 1; background-position-y: calc(var(--styleIdx) * var(--width) / 2 * -1);}
+        }
+    }
+
+    /* 메인 - 서비스 소개 - 문의 */
+    & .inquiryArea{display: flex; align-items: center; padding-block: 42px;
+        & p{font-size: 24px;}
+        & a{font-size: 16px; width: 226px; line-height: 60px; margin-left: auto;}
+    }
+}
