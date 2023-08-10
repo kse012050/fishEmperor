@@ -35,3 +35,29 @@
         &::before{margin-right: 40px;}
     }
 }
+
+
+/* 어복황제, 어복황제M*/
+.fishPage, .emperorPage{
+    & .detailFunc{
+        & [data-tab="btns"]{
+            & > li{
+                & button{padding-left: 96px;
+                    &::before{left: 30px;}
+                }
+            }
+        }
+    }
+}
+
+/* 어복황제 */
+.fishPage{
+    & .detailFunc{
+        & h3{margin-bottom: 60px;}
+    }
+}
+
+/* 어복황제M */
+.emperorPage{
+    & .mainFunc{padding-bottom: 105px;}
+}

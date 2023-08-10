@@ -63,9 +63,9 @@
 
 /* 어복황제, 어복황제M*/
 .fishPage, .emperorPage{
-    & .homeArea{display: flex; justify-content: center;
-        &::before{content: ''; width: 300px; aspect-ratio: 300 / 580; background-position: center; background-size: cover; margin-right: 120px; border-radius: 30px; box-shadow: 0 0 60px 0px rgba(0,0,0,0.1);}
-        & > div{padding-block: 30px;
+    & .homeArea{display: flex; justify-content: center; align-items: center;
+        &::before{content: ''; width: 300px; aspect-ratio: 300 / 580; background-position: center; background-size: cover; margin-right: 10%; border-radius: 30px; box-shadow: 0 0 60px 0px rgba(0,0,0,0.1);}
+        & > div{
             &::before{margin-bottom: 20px;}
             & h2{font-size: 50px; font-weight: 700; line-height: 62px; margin-bottom: 60px;}
             & mark{display: block; font-size: 24px; font-weight: 700; line-height: 29px; margin-bottom: 20px;}
@@ -82,12 +82,12 @@
         & p{font-size: 18px; font-weight: 300; line-height: 22.5px;}
     }
     & .detailFunc{--bg: var(--colorPlane02); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
-        & h3{width: 100%; text-align: center; margin-bottom: 26px;}
-        & [data-tab="btns"]{ max-width: 480px;
+        & h3{width: 100%; text-align: center;}
+        & [data-tab="btns"]{ max-width: 40.6779%;
             & > li{
                 &:not(:last-child){margin-bottom: 15px;}
-                & button{font-size: 15px; font-weight: 500; line-height: 20.6666px; text-align: left; padding: 30px 30px 30px 126px; background-color: white; position: relative;
-                    &::before{content: ''; position: absolute; left: 50px; top: 50%; transform: translateY(-50%); 
+                & button{font-size: 15px; font-weight: 500; line-height: 20.6666px; text-align: left; padding-block: 30px; padding-right: 30px; padding-left: 126px; background-color: white; position: relative;
+                    &::before{content: ''; position: absolute; top: 50%; transform: translateY(-50%); 
                         --width: 36px; width: var(--width); aspect-ratio: 1; background-repeat: no-repeat; background-position-x: 0; background-position-y: calc(var(--styleIdx) * var(--width) * -1); background-size: 200%;
                     }
                     & b{display: block; font-size: 18px; font-weight: 700; line-height: 21px; margin-bottom: 15px;}
@@ -98,7 +98,7 @@
                 &.active button::after{content: ''; position: absolute; right: 0; top: 50%; transform: translate(100%, -50%); border-width: 12px 0 12px 16px; border-style: solid; border-color: transparent var(--colorPoint);}
             }
         }
-        & [data-tab="contents"]{width: 590px;
+        & [data-tab="contents"]{width: 50%;
             & div{display: none;
                 &.active{display: block;}
                 & img{width: 100%;}
@@ -113,7 +113,7 @@
     & .mainFunc{overflow: hidden;
         & mark::before{background-image: url('../images/icon-calender.png');}
         & p{margin-bottom: 60px;}
-        & .fishSwiper{max-width: 1020px; margin-inline: auto; overflow: visible;
+        & .fishSwiper{max-width: 1020px; width: 81.05%; margin-inline: auto; overflow: visible;
             & .swiper-wrapper{gap: 60px;
                 & .swiper-slide{width: calc((100% - 120px) / 3) !important; box-shadow: 0 0 60px 0px rgba(0,0,0,0.1); border-radius: 30px;
                     & img{width: 100%; opacity: 0.3;}
@@ -121,8 +121,8 @@
                 }
             }
             & [class^="btn"]{--width: 80px; width: var(--width); aspect-ratio: 1; background: url('../images/icon-slider.png') no-repeat left top calc(var(--styleIdx) * var(--width) * -1)/ 100%; position: absolute; top: 50%; transform: translateY(-50%); z-index: 10; cursor: pointer;
-                &[class$="prev"]{--styleIdx: 0; left: calc((var(--width) + 40px) * -1);}
-                &[class$="next"]{--styleIdx: 1; right: calc((var(--width) + 40px) * -1);}
+                &[class$="prev"]{--styleIdx: 0; left: calc((var(--width) + 4%) * -1);}
+                &[class$="next"]{--styleIdx: 1; right: calc((var(--width) + 4%) * -1);}
             }
         }
     }
@@ -133,16 +133,17 @@
 /* 어복황제M */
 .emperorPage{--colorPoint: var(--colorPoint02);
     & .homeArea::before{background-image: url('../gif/gif02.gif');}
-    & .mainFunc{padding-bottom: 70px;
+    & .mainFunc{
         & mark::before{background-image: url('../images/icon-fingerprint.png');}
         & p{margin-bottom: 20px;}
         & div{max-width: 1500px; height: 562px; margin-inline: auto; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding: 79px; box-sizing: border-box;
-            background-image: url('../images/emperor-main.png'); background-repeat: no-repeat; background-position: center; background-size: cover;
+            background-image: url('../images/emperor-main.png'); background-repeat: no-repeat; background-position: center; background-size: 100%;
             & b{font-size: 16px; font-weight: 500; line-height: 21.5px; margin-bottom: 20px;}
             & small{font-size: 15px; font-weight: 300; line-height: 19px; color: var(--colorFont02);}
         }
     }
     & .detailFunc{
+        & h3{margin-bottom: 60px;}
         & [data-tab="btns"] > li button::before{background-image: url('../images/icon-emperor.png');}
         & .smartArea{display: flex; flex-wrap: wrap; --spacing: 30px; gap: var(--spacing); padding: var(--spacing); background-color: white; position: relative;
             &::before{content: ''; position: absolute; inset: 0 var(--spacing) auto; border-top: 1px dashed var(--colorLine);}
@@ -171,7 +172,7 @@
     & .homeArea{color: white; text-align: center; padding-block: 140px 160px; background: url('../images/aboutUs-bg.png') no-repeat center bottom / cover;
         & img{width: 110px; margin-bottom: 40px;}
         & strong{display: block; font-size: 24px; font-weight: 700; line-height: 29px; margin-bottom: 20px;}
-        & p{font-size: 16px; font-weight: 500; color: rgba(255, 255, 255, 0.7);}
+        & p{font-size: 16px; font-weight: 500; line-height: 22.3333px; color: rgba(255, 255, 255, 0.7);}
         & div{display: flex; justify-content: center; align-items: center; margin-top: 60px; gap: 20px;
             & a{width: 240px; font-size: 16px; font-weight: 700; line-height: 60px; border: 1px solid white;}
         }
@@ -179,8 +180,8 @@
     & section{
         & h2{font-size: 40px; font-weight: 700; line-height: 48px; text-align: center; margin-bottom: 60px;}
         & address{display: flex; justify-content: space-between; align-items: flex-start;
-            & img{width: 680px;}
-            & > div{width: 420px;
+            & img{width: 57.6271%;}
+            & > div{width: 35.5932%; min-width: 366px;
                 & dl{padding-block: 30px 40px; border-bottom: 1px dashed var(--colorLine);
                     & dt{font-size: 18px; font-weight: 700; line-height: 21px; margin-bottom: 15px;}
                     & dd{font-size: 15px; font-weight: 300; line-height: 20px;
