@@ -143,29 +143,26 @@
 
 /* 회사소개 */
 .aboutUsPage{
-    & .homeArea{color: white; text-align: center; padding-block: 140px 160px; background: url('../images/aboutUs-bg.png') no-repeat center bottom / cover;
-        & img{width: 110px; margin-bottom: 40px;}
-        & strong{display: block; font-size: 24px; font-weight: 700; line-height: 29px; margin-bottom: 20px;}
-        & p{font-size: 16px; font-weight: 500; line-height: 22.3333px; color: rgba(255, 255, 255, 0.7);}
-        & div{display: flex; justify-content: center; align-items: center; margin-top: 60px; gap: 20px;
-            & a{width: 240px; font-size: 16px; font-weight: 700; line-height: 60px; border: 1px solid white;}
+    & .homeArea{color: white; text-align: center; background: url('../images/aboutUs-bg.png') no-repeat center bottom / cover;
+        & img{margin-bottom: 40px;}
+        & strong{display: block; font-weight: 700; margin-bottom: 20px;}
+        & p{font-weight: 500; color: rgba(255, 255, 255, 0.7);}
+        & div{
+            & a{font-size: 16px; font-weight: 700; line-height: 60px; border: 1px solid white;}
         }
     }
     & section{
-        & h2{font-size: 40px; font-weight: 700; line-height: 48px; text-align: center; margin-bottom: 60px;}
-        & address{display: flex; justify-content: space-between; align-items: flex-start;
-            & img{width: 57.6271%;}
-            & > div{width: 35.5932%; min-width: 366px;
-                & dl{padding-block: 30px 40px; border-bottom: 1px dashed var(--colorLine);
-                    & dt{font-size: 18px; font-weight: 700; line-height: 21px; margin-bottom: 15px;}
-                    & dd{font-size: 15px; font-weight: 300; line-height: 20px;
-                        &:not(:last-child){margin-bottom: 40px;}
-                    }
+        & h2{font-weight: 700; text-align: center;}
+        & address{
+            &::before{content: '';  background-repeat: no-repeat; background-position: center; background-size: cover; margin-right: 5%;}
+            & > div{
+                & dl{border-bottom: 1px dashed var(--colorLine);
+                    & dt{font-weight: 700;}
+                    & dd{font-weight: 300;}
                 }
-                & div{display: flex; align-items: center; padding-block: 40px;
-                    & :not(:last-child){margin-right: 40px;}
-                    & b{font-size: 18px; font-weight: 700;}
-                    & a{font-size: 15px; font-weight: 300; display: flex; align-items: center;
+                & div{display: flex; align-items: center;
+                    & b{font-weight: 700;}
+                    & a{font-weight: 300; display: flex; align-items: center;
                         &::before{content: ''; --width: 20px; width: var(--width); aspect-ratio: 1; background: url('../images/icon.png') no-repeat left top calc(var(--styleIdx) * var(--width) * -1) / 200%; margin-right: 7px;}
                         & span{text-decoration: underline;}
                     }
@@ -178,21 +175,21 @@
 
 /* FAQ */
 .faqPage{
-    & h2{font-size: 40px; font-weight: 700; line-height: 48px; text-align: center; margin-bottom: 60px;}
+    & h2{font-weight: 700; text-align: center;}
     & [data-formData="btns"]{display: flex; justify-content: center; align-items: center; margin-bottom: 40px;
         & li{
-            & button{font-size: 20px; font-weight: 700; line-height: 24px; padding-inline: 30px;}
+            & button{font-weight: 700;}
             &:is(.active, :hover) button{color: var(--colorPoint01);}
         }
     }
     & [data-formData="contents"]{border-top: 1px solid var(--colorFont);
         & li{border-bottom: 1px solid var(--colorLine);
-            & button{width: 100%; font-size: 18px; font-weight: 300; line-height: 100px; text-align: left; padding-inline: 30px 20px; position: relative;
-                &::after{content: ''; position: absolute; width: 42px; aspect-ratio: 1; right: 20px; top: 50%; transform: translateY(-50%); background: url('../images/arrow-dwon.png') no-repeat center / cover;}
+            & button{width: 100%; font-weight: 300; text-align: left; position: relative;
+                &::after{content: ''; position: absolute; aspect-ratio: 1; top: 50%; transform: translateY(-50%); background: url('../images/arrow-dwon.png') no-repeat center / cover;}
             }
-            & pre{display: none; font-size: 16px; font-weight: 300; line-height: 24.25px; margin: 0; padding: 40px 30px 80px; background-color: #f8f8f8;}
+            & div{display: none; font-weight: 300; background-color: #f8f8f8;}
 
-            &.active pre{display: block;}
+            &.active div{display: block;}
             &.active button, button:hover{font-weight: 700;}
         }
     }

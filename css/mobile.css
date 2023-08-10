@@ -171,3 +171,57 @@ footer{padding-block: 30px;
         & .smartArea{text-align: left; gap: var(--spacing) 20px; max-width: 330px; margin-inline: auto;}
     }
 }
+
+
+/* 회사소개 */
+.aboutUsPage{
+    & .homeArea{padding-block: 60px;
+        & img{width: 92px;}
+        & strong{font-size: 20px; line-height: 24px;}
+        & p{font-size: 15px; line-height: 21.2px;}
+        & div{margin-top: 40px;
+            & a{display: block; max-width: 320px; margin-inline: auto;
+                &:not(:last-child){margin-bottom: 15px;}
+            }
+        }
+    }
+    & section{
+        & h2{font-size: 32px; line-height: 38px; margin-bottom: 40px;}
+        & address{
+            /* &::before, > div{max-width: 320px; margin-inline: auto;} */
+            &::before{display: block; background-image: url('../images/aboutUs-map-m.png'); width: 100%; aspect-ratio: 320 / 370; margin-bottom: 40px;}
+            & > div{
+                & dl{padding-bottom: 30px; margin-bottom: 30px;
+                    & dt{font-size: 16px; line-height: 19px; margin-bottom: 12px;}
+                    & dd{font-size: 14px; line-height: 18px;
+                        &:not(:last-child){margin-bottom: 30px;}
+                    }
+                }
+                & div{
+                    & a:not(:last-of-type){margin-right: 20px;}
+                    & b{font-size: 16px; margin-right: 23px;}
+                    & a{font-size: 14px;}
+                }
+            }
+        }
+    }
+}
+
+
+/* FAQ */
+.faqPage{
+    & h2{font-size: 32px; line-height: 38px; margin-bottom: 30px;}
+    & [data-formData="btns"]{flex-wrap: wrap; row-gap: 20px; max-width: 320px; margin-inline: auto;
+        & li{
+            & button{font-size: 18px; line-height: 21px; padding-inline: 20px;}
+        }
+    }
+    & [data-formData="contents"]{
+        & li{
+            & button{font-size: 15px; line-height: 80px; padding-inline: 10px;
+                &::after{width: 30px; right: 10px;}
+            }
+            & div{font-size: 15px; line-height: 21.3333px; padding: 30px 20px 40px;}
+        }
+    }
+}

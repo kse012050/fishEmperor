@@ -60,3 +60,13 @@
 .emperorPage{
     & .mainFunc{padding-bottom: 105px;}
 }
+
+
+/* 회사소개 */
+.aboutUsPage{
+    & section{
+        & address{
+            &::before{width: 53.9419%; aspect-ratio: 520 / 480; background-image: url('../images/aboutUs-map-t.png');}
+        }
+    }
+}

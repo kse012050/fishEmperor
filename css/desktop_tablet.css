@@ -169,3 +169,54 @@ footer{ --block: 40px; padding-block: var(--block); position: relative;
         }
     }
 }
+
+
+/* 회사소개 */
+.aboutUsPage{
+    & .homeArea{padding-block: 140px 160px;
+        & img{width: 110px;}
+        & strong{font-size: 24px; line-height: 29px;}
+        & p{font-size: 16px; line-height: 22.3333px;}
+        & div{display: flex; justify-content: center; align-items: center; margin-top: 60px; gap: 20px;
+            & a{width: 240px;}
+        }
+    }
+    & section{
+        & h2{font-size: 40px; line-height: 48px; margin-bottom: 60px;}
+        & address{display: flex; justify-content: space-between; align-items: center;
+            & > div{width: 35.5932%; min-width: 366px;
+                & dl{padding-block: 30px 40px;
+                    & dt{font-size: 18px; line-height: 21px; margin-bottom: 15px;}
+                    & dd{font-size: 15px; line-height: 20px;
+                        &:not(:last-child){margin-bottom: 40px;}
+                    }
+                }
+                & div{padding-block: 40px;
+                    & :not(:last-child){margin-right: 40px;}
+                    & b{font-size: 18px;}
+                    & a{font-size: 15px;}
+                }
+            }
+        }
+    }
+}
+
+
+
+/* FAQ */
+.faqPage{
+    & h2{font-size: 40px; line-height: 48px; margin-bottom: 60px;}
+    & [data-formData="btns"]{
+        & li{
+            & button{font-size: 20px; line-height: 24px; padding-inline: 30px;}
+        }
+    }
+    & [data-formData="contents"]{
+        & li{
+            & button{font-size: 18px; line-height: 100px; padding-inline: 30px 20px;
+                &::after{width: 42px; right: 20px;}
+            }
+            & div{white-space: pre; font-size: 16px; line-height: 24.25px; padding: 40px 30px 80px;}
+        }
+    }
+}
