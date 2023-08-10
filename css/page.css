@@ -2,7 +2,7 @@
 /* 메인 - 서비스 소개 */
 .mainPage{
     /* 메인 - 서비스 소개 - 홈 */
-    & .homeArea{background: url('../images/main-bg.png') no-repeat center / cover;
+    & .homeArea{background-repeat: no-repeat; background-position: center; background-size: cover;
         & > div{
             & .textArea{color: white;
                 & h2{font-weight: 700; max-width: 325px;}

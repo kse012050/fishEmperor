@@ -48,7 +48,7 @@ footer{padding-block: 30px;
 /* 메인 - 서비스 소개 */
 .mainPage{
     /* 메인 - 서비스 소개 - 홈 */
-    & .homeArea{padding-top: 60px;
+    & .homeArea{padding-top: 60px; background-image: url('../images/main-bg-m.png');
         & > div{
             & .textArea{
                 & h2{font-size: 42px; line-height: 52.6666px; margin-bottom: 60px;}

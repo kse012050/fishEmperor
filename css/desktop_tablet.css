@@ -42,7 +42,7 @@ footer{ --block: 40px; padding-block: var(--block); position: relative;
 /* 메인 - 서비스 소개 */
 .mainPage{
     /* 메인 - 서비스 소개 - 홈 */
-    & .homeArea{
+    & .homeArea{background-image: url('../images/main-bg.png');
         & > div{display: flex; justify-content: space-between; align-items: center;
             & .textArea{
                 & ul{
