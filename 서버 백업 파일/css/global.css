@@ -1,0 +1,68 @@
+
+/* 마크 app */
+[data-app]::before{content: attr(data-app) 'APP'; display: inline-block; font-size: 15px; font-weight: 700; line-height: 26px; padding-inline: 10px;}
+[data-app="이용자"]::before{color: #1f76db; background-color: #ddedff;}
+[data-app="선장"]::before{color: #445fe5; background-color: #ebeefb;}
+
+
+/* 앱 다운로드 버튼 */
+a[class^="icon"]{font-size: 16px; font-weight: 500; line-height: 60px; padding-left: 30px; border: 1px solid var(--colorLine); box-sizing: border-box; display: flex; align-items: center;
+    &::before{content: ''; --width: 26px; width: var(--width); aspect-ratio: 1; background:url('../images/icon-app.png') no-repeat left top calc(var(--styleIdx) * var(--width) * -1) / 100%;}
+    &[class$="google"]{--styleIdx: 0; margin-bottom: 15px;}
+    &[class$="apply"]{--styleIdx: 1;}
+
+}
+
+
+/* 이미지 박스 */
+[class*='img-app']{width: var(--width); aspect-ratio: 1; background: url('../images/app.png') no-repeat left top calc(var(--styleIdx) * var(--width) * -1) / 100%; text-indent: -9999px;
+    &.img-app01{--styleIdx: 0;}
+    &.img-app02{--styleIdx: 1;}
+}
+
+
+.fullBg{background-color: var(--bg); box-shadow: 0 0 0 100vmax var(--bg); clip-path: inset(0 -100vmax);}
+hr.fullBg{--bg: var(--colorLine); border: none; height: 1px; margin: 0;}
+
+
+/* 페이저 */
+.pagerBox{display: flex; justify-content: center; align-items: center; margin-top: 40px;
+    & button{--width: 24px; width: var(--width); aspect-ratio: 1; background: url('../images/icon-pager.png') no-repeat left top calc(var(--styleIdx) * var(--width) * -1) / 100%; text-indent: -9999px;
+        &:not(:last-of-type){margin-right: 10px;}
+    }
+    & ol{margin-inline: 10px; display: flex; align-items: center; gap: 25px;
+        & li{
+            & a{font-size: 16px; font-weight: 700; color: var(--colorFont03);}
+            &.active a, a:hover{color: var(--colorFont); text-decoration: underline;}
+        }
+    }
+}
+
+
+/* 해더 */
+header{position: sticky; left: 0; top: 0; background-color: white; border-bottom: 1px solid var(--colorLine); z-index: 100;
+    & h1 a{display: block;  background-repeat: no-repeat; background-position: center; background-size: cover; text-indent: -9999px;}
+    & nav ul li{font-weight: 700;}
+}
+
+
+/* 푸터 */
+footer{color: var(--colorFont02);
+    & address{
+        & dl{display: flex; margin-bottom: 30px;
+            & dt{margin-right: 0.6em;}
+            & dd{display: flex; align-items: center;
+                &:not(:last-child)::after{content: ''; width: 1px; height: 12px; background-color: var(--colorLine); margin-inline: 14.5px;}
+            }
+        }
+        & div{display: flex; align-items: center;
+            & b{font-weight: 700;}
+            & a{display: flex; align-items: center;
+                &:not(:last-child){margin-right: 20px;}
+                &::before{content: ''; --width: 20px; width: var(--width); aspect-ratio: 1; background: url('../images/icon.png') no-repeat left 100% top calc(var(--styleIdx) * var(--width) * -1) / 200%; margin-right: 7px;}
+                & span{text-decoration: underline;}
+            }
+        }
+    }
+    & > p{font-weight: 300; margin-top: 30px;}
+}

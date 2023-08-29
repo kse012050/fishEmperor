@@ -1,0 +1,12 @@
+:root{
+    --colorPoint01: #1F76DB;
+    --colorPoint02: #445FE5;
+    --colorFont: #222;
+    --colorFont01: #666;
+    --colorFont02: #999;
+    --colorFont03: #bbb;
+    --colorLine: #DEDEDE;
+    --colorPlane01: #F1F1F1;
+    --colorPlane02: #F8F8F8;
+    --mobileSpacing: 20px;
+}

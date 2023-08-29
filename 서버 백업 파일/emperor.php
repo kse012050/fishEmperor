@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0, user-scalable=0">
+    <!-- Iphone 모바일 확대 방지  maximum-scale=1.0, user-scalable=0-->
+    <title>어복황제M</title> 
+    <link rel="stylesheet" href="css/import.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="index.php">어복황제 로고</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.php">서비스 소개</a></li>
+                <li><a href="fish.php">어복황제</a></li>
+                <li class="active"><a href="emperor.php">어복황제M</a></li>
+                <li><a href="aboutUs.php">회사 소개</a></li>
+                <li><a href="FAQ.php">FAQ</a></li>
+            </ul>
+        </nav>
+        <button>메뉴 열기 / 닫기</button>
+    </header>
+
+    <div class="emperorPage">
+        <div class="homeArea contentsSize contentsBlcok">
+            <div data-app="선장">
+                <h2>
+                    복잡한 낚시/출조 관리,<br>
+                    어복황제M으로 쉽게!
+                </h2>
+                <mark>어복황제 낚시 예약/승선자 관리 앱</mark>
+                <p>
+                    선상관리, 낚시 상품관리는 물론 조황사진 등록부터<br>
+                    조황 영상 실시간 제어도 가능합니다.
+                </p>
+                <a href="" class="icon-google">구글 플레이 스토어 앱 다운로드</a>
+                <a href="" class="icon-apply">애플 앱스토어 앱 다운로드</a>
+            </div>
+        </div>
+
+        <hr class="fullBg">
+
+        <section class="mainFunc contentsTop">
+            <h3>어복황제M 주요 기능</h3>
+            <mark>스마트 승선 신고 기능</mark>
+            <p>
+                단말기에 지문 터치 만으로 승선 신고가 바로!<br>
+                수기 승선명부 작성 없이 안전하고 간편하게 승선 관리할 수 있습니다.
+            </p>
+            <div>
+                <b>
+                    iOT와 지문 인식을 통한 실명 확인으로<br>
+                    하이패스 승선 및 자동 출항 처리가 가능합니다.
+                </b>
+                <small>
+                    * ‘전자승선명부’는 암호화 처리되어 어복황제<br>
+                    보안시스템에 안전하게 보관됩니다.
+                </small>
+            </div>
+        </section>
+
+        
+        <section class="detailFunc contentsSize contentsBlcok fullBg">
+            <h3>어복황제 상세 기능</h3>
+            <ul data-tab="btns">
+                <li>
+                    <button data-icon="desktop-after">
+                        <b data-text01="desktop-after">스마트 출조</b>
+                        <span data-content="text01">
+                            낚시 예약 관리, 상품관리, 선상관리, 조황사진을
+                            쉽고 편리하게 한번에 관리합니다.
+                        </span>
+                    </button>
+                    <ul class="smartArea" data-styleIdx data-content="icon">
+                        <li>
+                            <b>예약관리</b>
+                            <p>어복황제 실시간 예약 내역을 한눈에 확인 및 편리하게 관리합니다.</p>
+                        </li>
+                        <li>
+                            <b>상품관리</b>
+                            <p>어복황제에 등록되는 상품을 쉽고 편리하게 관리합니다.</p>
+                        </li>
+                        <li>
+                            <b>승선 관리</b>
+                            <p>iOT와 지문 인식을 통한 실명 확인으로 하이패스 승선 및 자동 출항 처리가 가능합니다.</p>
+                        </li>
+                        <li>
+                            <b>정산 관리</b>
+                            <p>운영에 따른 정산도 한 번에 처리할 수 있습니다.</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <button>
+                        <b data-text02="desktop-after">선박 및 카메라 관리</b>
+                        <span data-content="text02">
+                            선상 낚시의 실시간 조황 영상을 편리하게 
+                            제어 및 관리합니다.
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <b data-text03="desktop-after">조황 관리</b>
+                        <span data-content="text03">
+                            어복황제 조황기 등록과 댓글 알림으로
+                            고객과의 빠른 소통이 가능합니다
+                        </span>
+                    </button>
+                </li>
+            </ul>
+            <div data-tab="contents">
+                <div>
+                    <img src="images/emperor-img01.png" alt="스마트 출조" data-text01="mobile-before" data-icon="mobile-after">
+                </div>
+                <div>
+                    <img src="images/emperor-img02.png" alt="선박 및 카메라 관리" data-text02="mobile-before">
+                </div>
+                <div>
+                    <img src="images/emperor-img03.png" alt="조황 관리" data-text03="mobile-before">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <hr class="fullBg">
+
+    <?php include "footer.php"; ?>
+</body>
+</html>
